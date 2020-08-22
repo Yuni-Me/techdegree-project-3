@@ -1,0 +1,222 @@
+/* ---- Web Fonts ---- */
+
+@font-face {
+    font-family: 'Merriweather Regular';
+    src: url('../fonts/Merriweather-Regular.ttf') format('truetype');
+}
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+/* ---- Base Styles ---- */
+
+* {
+	box-sizing: border-box;
+}
+body {
+    font-family: 'Merriweather Regular', monospace, Arial, Helvetica, serif;
+    color: rgb(88, 86, 86);
+    line-height: 1.8;
+}
+h1 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+}
+h2 {
+    font-size: 1.1em;
+    color: #0f0f18;
+    line-height: 1.1;
+    margin-top: 1.3em;
+    letter-spacing: .01em;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+p {
+    color: #13131f;
+    opacity: .4;
+    font-size: .89em;
+    line-height: 1.5;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+    background-color: #2b3741;
+    text-align: center;
+    padding: 20px;
+    color: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.signup-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    font-weight: 100;
+    margin-left: 2px;
+}
+
+/* ---- Page Elements ---- */
+
+hr {
+    border-radius: 4px;
+}
+.line-1 {
+    border: solid 1.5px #2b3741;
+    margin-bottom: -3px;
+}
+.line-2 {
+    border: solid .5px #2b3741;
+    margin-bottom: 70px;
+}
+fieldset {
+    position: relative;
+    border: 0;
+}
+.contact {
+    display: flex;
+    justify-content: flex-start;
+    font-size: .9em;
+    background-color: rgba(80, 98, 96, 0.2);
+}
+
+.fieldset-header {
+    color: #0f0f18;
+    position: absolute;
+    top: 40px;
+    font-size: 1.3em;
+    font-weight: 900;
+    margin-bottom: 20px
+}
+.label-pair {
+    display: flex;
+    flex-direction: column;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    margin: 10px 0;
+    height: 3.4em;
+    background-color: #ebf0f1;
+    padding: 15px;
+    border-radius: 6px;
+    border: 0;
+    transition: box-shadow 2s, background-color 1s;
+}
+input::placeholder {
+    text-align: right;
+    color: rgba(88, 86, 86, .4);
+    font-size: .8em;
+}
+#state {
+    color: rgba(88, 86, 86, .4);
+}
+input[id="zipcode"] {
+    width: 50%;
+}
+.newsletter {
+    line-height: 1.9em;
+    font-size: .8em;
+}
+label ~ input[type="checkbox"],
+label ~ input[type="radio"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 10px;
+    margin-right: 15px;
+}
+label[class="format"] {
+    display: inline-block;
+    padding-top: 20px;
+}
+textarea {
+    width: 100%;
+    margin: 15px 0;
+    height: 3.3em;
+    background-color: #ebf0f1;
+    border: 0;
+    transition: box-shadow 2s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0 0 5px 2px rgb(64, 224, 208);
+    background-color: rgba(64, 224, 208, .1);
+    border: 2px solid rgb(64, 224, 208)
+}
+select:focus {
+    background-color: rgba(64, 224, 208, .1);
+}
+#topics {
+    background-color: rgb(235, 240, 241);
+    height: 8em;
+}
+button {
+    background-color: rgb(64, 224, 208);
+    height: 3.5em;
+    color: #f8f8f8;
+    margin: 0 auto;
+    font-size: 1.1em;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 6px;
+    border: 0;
+    transition: box-shadow 2s, font-size 1s;
+}
+button:focus {
+    box-shadow: 0 0 5px 4px rgb(64, 224, 208);
+    
+    /* font-size: 1.5em; */
+    text-transform: uppercase;
+}
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    height: 250px;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+        max-width: 700px; 
+    }
+    
+    .label-pair {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 70%;
+    } 
+    
+    .zipcode {
+        width: 70%;
+    }
+
+    input[id="zipcode"] {
+        width: 40%;
+    }
+}
